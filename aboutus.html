@@ -193,13 +193,12 @@
   </section>
 
   <script>
-      // Add event listener to detect scrolling
       document.getElementById('about-us').addEventListener('touchstart', function () {
           this.classList.add('active');
           document.getElementById('text-container').classList.add('active');
       });
 
-      // Allow the card to retract on down swipe (if necessary)
+  
       document.getElementById('about-us').addEventListener('touchend', function () {
           if (this.scrollTop === 0) {
               this.classList.remove('active');
