@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>Decden Robotics</title>
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Manrope", sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -46,7 +49,6 @@
             z-index: 1000;
             transition: background-color 0.3s ease;
    			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-
         }
         .navbar-logo{
         	display: flex;
@@ -224,13 +226,14 @@
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
+                margin-right: 80px;
             }
 
             .nav-links {
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                background-color: #333;
+                background-color: rgba(0 ,0 ,0 ,0.7);
                 position: absolute;
                 top: 60px;
                 left: 0;
@@ -241,6 +244,10 @@
                 padding: 15px;
                 text-align: center;
                 border-top: 1px solid #444;
+                margin-right: 73px;
+            }
+            .nav-links a:hover {
+                background-color: skyblue;
             }
 
             .nav-links.active {
@@ -322,7 +329,7 @@
     <nav class="navbar">
         <div class="navbar-logo">
             <img src="images/logo.png" alt="Decden Robotics Logo">
-            <h3  style="color:white; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">&ensp; <b>DECDEN</b> </h3>
+            <h3  style="color:white; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);font-family: Manrope, sans-serif;">&ensp; <b>DECDEN</b> </h3>
         </div>
         <div class="menu-icon" id="menu-icon">&#9776;</div>
         <div class="nav-links" id="nav-links">
@@ -335,8 +342,8 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1 style="color:#333333">Unleashing the Future:<br> Where Robotics Meets Humanity</h1>
-        <p style="color:#333333">Introd cing Decden, the World's Most Advanced Humanoid Robot,<br> Designed to Collaborate, Assist, and Transform Industries with Unprecedented Intelligence</p>
+        <h1 style="color:#333333">Unleashing the Future<br> Where Robotics Meets Humanity</h1>
+        <p style="color:#333333">Introducing Decden, the World's Most Advanced Humanoid Robot,<br> Designed to Collaborate, Assist, and Transform Industries with Unprecedented Intelligence</p>
         <img src="images/robot.png" alt="Decden Robot" class="hero-image">
         <button class="btn">Meet DECDEN</button>
     </section>
