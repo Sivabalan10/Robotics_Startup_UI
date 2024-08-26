@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Us - DECDEN</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900&display=swap" rel="stylesheet">
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Raleway', sans-serif;
+          background-color: #000;
+          color: #fff;
+          position: relative;
+          overflow-x: hidden;
+      }
+
+      .text-container {
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+      }
+
+      .text-container h1 {
+          margin: 0;
+          font-size: 150px;
+          color: rgba(225,225,225, .01);
+          background-image: url("https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2cf549433129d4227d1879347b9e78ce&auto=format&fit=crop&w=1248&q=80");
+          background-repeat: repeat;
+          -webkit-background-clip: text;
+          animation: animate 15s ease-in-out infinite;
+          text-transform: uppercase;
+          font-weight: 900;
+      }
+
+      @keyframes animate {
+          0%, 100% {
+              background-position: left top;
+          }
+          25% {
+              background-position: right bottom;
+          }
+          50% {
+              background-position: left bottom;
+          }
+          75% {
+              background-position: right top;
+          }
+      }
+
+      .about-us {
+          width: 100%;
+          background-color: rgba(34, 34, 34, 0.8);
+          padding: 50px 20px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transform: translateY(100%);
+          z-index: 2;
+          border-radius: 15px 15px 0 0;
+          transition: transform 0.5s ease-in-out;
+          max-height: 90vh;
+          overflow-y: auto;
+          box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .about-us.active {
+          transform: translateY(0);
+      }
+
+      .about-us h2 {
+          font-size: 36px;
+          text-align: center;
+          margin-bottom: 40px;
+          color: #fff;
+      }
+
+      .description-tab {
+          font-size: 18px;
+          color: #ccc;
+          text-align: center;
+          margin-bottom: 30px;
+          padding: 0 10%;
+      }
+
+      .team {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+      }
+
+      .team-member {
+          background-color: #333;
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
+          width: 300px;
+          transition: transform 0.3s ease;
+          margin: 10px;
+      }
+
+      .team-member img {
+          width: 40%;
+          height: 40%;
+          border-radius: 50%;
+          margin-bottom: 20px;
+      }
+
+      .team-member h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+          color: #fff;
+      }
+
+      .team-member p {
+          font-size: 16px;
+          color: #ccc;
+      }
+
+      .team-member:hover {
+          transform: scale(1.05);
+          border: cyan 2px solid;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+      }
+
+      .blur-background {
+          filter: blur(0px);
+          transition: filter 0.5s ease-in-out;
+      }
+
+      .blur-background.active {
+          filter: blur(8px);
+      }
+
+      @media (max-width: 768px) {
+          .text-container h1 {
+              font-size: 80px;
+          }
+
+          .about-us {
+              padding: 20px 10px;
+              border-radius: 25px 25px 0 0;
+          }
+
+          .description-tab {
+              padding: 0 5%;
+          }
+
+          .team {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          .team-member {
+              width: 68%;
+              margin-right: 30px;
+          }
+      }
+  </style>
+</head>
+<body>
+  <div class="text-container blur-background" id="text-container">
+    <h1>DECDEN</h1>
+    <h2 style="text-align: center;color: grey;">Scroll Up to See More</h2>
+  </div>
+  <section class="about-us" id="about-us">
+      <h2>About Us</h2>
+      <div class="description-tab">
+          DECDEN is at the forefront of robotics, merging advanced technology with human-centric design to create the world's most sophisticated humanoid robot. Our mission is to revolutionize industries and improve lives through intelligent collaboration.
+      </div>
+      <div class="team">
+          <div class="team-member">
+              <img src="images/shri.jpg" alt="Founder Image">
+              <h3>Shrinithi S</h3>
+              <p>Founder & CEO</p>
+              <p>Shrinithi has over 20 years of experience in the robotics industry and is the visionary behind DECDEN.</p>
+          </div>
+          <div class="team-member">
+              <img src="images/siva.jpeg" alt="Co-Founder Image">
+              <h3>Sivabalan T</h3>
+              <p>Co-Founder & CTO</p>
+              <p>Sivabalan is a tech genius with a background in AI and machine learning, driving the innovation at DECDEN.</p>
+          </div>
+      </div>
+  </section>
+
+  <script>
+      // Add event listener to detect scrolling
+      document.getElementById('about-us').addEventListener('touchstart', function () {
+          this.classList.add('active');
+          document.getElementById('text-container').classList.add('active');
+      });
+
+      // Allow the card to retract on down swipe (if necessary)
+      document.getElementById('about-us').addEventListener('touchend', function () {
+          if (this.scrollTop === 0) {
+              this.classList.remove('active');
+              document.getElementById('text-container').classList.remove('active');
+          }
+      });
+  </script>
+</body>
+</html>
