@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Jersey+10&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+       
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +27,7 @@
             overflow: hidden;
         }
 
-        /* Glowing Background Animation */
+        
         .glowing {
             position: absolute;
             min-width: 700px;
@@ -35,7 +35,7 @@
             margin: -150px;
             transform-origin: right;
             animation: colorChange 5s linear infinite;
-            z-index: 1; /* Ensure background is behind the card */
+            z-index: 1; 
         }
 
         .glowing:nth-child(even) {
@@ -135,7 +135,7 @@
             }
         }
 
-        /* Container Styles */
+        
         .container {
             width: 100%;
             height: 100vh;
@@ -148,18 +148,18 @@
         }
 
 
-        /* Box Styles */
+        
         .box {
             width: 350px;
-            height: auto; /* Adjust height to fit content dynamically */
+            height: auto;
             background-color: rgba(0, 0, 26, 0.85);
             border-radius: 10px;
             padding: 60px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center-align items */
-            justify-content: center; /* Center content */
+            align-items: center; 
+            justify-content: center; 
             position: relative;
             z-index: 3;
             transform: scale(1);
@@ -169,7 +169,7 @@
         }
 
 
-        /* DECDEN Heading Styles */
+       
         .decden {
             color: #e0e0e9;
             font-weight: bold;
@@ -182,18 +182,18 @@
             padding: 20px;
         }
 
-        /* Slider Styles */
+      
         .slider {
             width: 100%;
-            height: 200px; /* Adjusted height for better fit */
+            height: 200px; 
             margin-bottom: 20px;
-            border-radius: 10px; /* Rounded corners */
-            overflow: hidden; /* Ensure no overflow */
+            border-radius: 10px; 
+            overflow: hidden; 
             animation: scaleUp 1.5s ease-in-out;
         }
 
 
-        /* Image Styles */
+        
         .model {
             width: 100%;
             height: 100%;
@@ -201,7 +201,7 @@
             border-radius: 10px;
         }
 
-        /* Details Heading Styles */
+        
         .heading {
             color: white;
             font-size: 18px;
@@ -220,7 +220,7 @@
             animation: fadeInUp 2.5s ease-in-out;
         }
 
-        /* Mobile View Responsiveness */
+       
         @media only screen and (max-width: 600px) {
             .box {
                 width: 90%;
@@ -245,7 +245,7 @@
         }
 
 
-        /* Animations */
+       
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -273,26 +273,22 @@
     </style>
 </head>
 <body>
-    <!-- Glowing Background -->
+    
     <div class="glowing">
         <span style="--i:1;"></span>
         <span style="--i:2;"></span>
         <span style="--i:3;"></span>
     </div>
 
-    <!-- Container -->
+   
     <div class="container">
-        <!-- Card -->
         <div class="box">
-            <!-- Slider -->
             <div class="slider">
                 <img src="images/robo1.jpeg" alt="Model" class="model"/>
                 <img src="images/robo2.jpeg" alt="Model" class="model"/>
                 <img src="images/robo1.jpeg" alt="Model" class="model"/>
                 <img src="images/robo2.jpeg" alt="Model" class="model"/>
             </div>
-
-            <!-- Content -->
             <div class="content">
                 <h1 class="decden"><u>DECDEN</u></h1>
                 <h2 class="heading">AI POWERED INTERACTION</h2>
