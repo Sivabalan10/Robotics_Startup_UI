@@ -1,6 +1,6 @@
 # DECDEN - Humanoid Robotics UI
 
-![DECDEN Logo](path_to_logo_image)
+![DECDEN Logo](https://github.com/Sivabalan10/Robotics_Startup_UI/blob/main/images/logo.png)
 
 ## About the Project
 
